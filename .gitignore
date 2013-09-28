@@ -4,6 +4,8 @@
 *.so
 
 # Packages
+*.xls
+*.xlsx
 *.egg
 *.prefs
 *.egg-info

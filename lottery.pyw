@@ -33,7 +33,8 @@ class Lottery:
         pass
     def draw(self):
         self.win = Tk()  #定义一个窗体
-        self.win.title('Hello World')    #定义窗体标题
+        self.win.iconbitmap('icon.ico')  # 更换tk图标
+        self.win.title('SFD lottery')    #定义窗体标题
         self.win.geometry('600x400')     #定义窗体的大小，是400X200像素
 
         bottonframe = Frame(self.win, height = 30)
@@ -108,7 +109,7 @@ class Lottery:
         '''从excel读取'''
         file_handle = xlrd.open_workbook(filename)
         sheet = file_handle.sheet_by_index(0)
-        lines = (sheet.col_values(0,1)) # 假设第一列是姓名,可调整
+        lines = (sheet.col_values(0,0)) # 假设第一列是姓名,可调整
         # if file_handle == null:
         #   return;
         # self.user_list =[]
